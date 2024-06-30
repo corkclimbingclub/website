@@ -6,8 +6,9 @@ To deploy you need to :
 
 1. Run `npm install`
 2. Build the website using `npm run build`
-3. Connect using sftp : `sftp corkclt@ftp.cluster023.hosting.ovh.net` (you will need the password configured in OVH)
-4. Replace the content of the `dist` folder with your local `dist`
+3. Replace the content of the `dist` directory on the server using : `scp -sr dist corkclt@ftp.cluster023.hosting.ovh.net:/home/corkclt/dist`
+
+NB : You will be prompted for a password. This corresponds to the SFTP user password in OVH
 
 ## 🚀 Project Structure
 
