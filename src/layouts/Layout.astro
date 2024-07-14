@@ -3,6 +3,8 @@ interface Props {
   title: string;
 }
 
+import Nav from "../components/Nav.jsx";
+
 const { title } = Astro.props;
 ---
 
@@ -20,10 +22,15 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Nav client:load />
     <slot />
   </body>
 </html>
 <style is:global>
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-size: 1.5rem;
     text-align: center;
