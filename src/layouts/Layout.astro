@@ -3,6 +3,7 @@ interface Props {
   title: string;
 }
 
+import Footer from "../components/Footer";
 import Nav from "../components/Nav.jsx";
 
 const { title } = Astro.props;
@@ -23,7 +24,10 @@ const { title } = Astro.props;
   </head>
   <body>
     <Nav client:load />
-    <slot />
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -32,27 +36,23 @@ const { title } = Astro.props;
   }
 
   body {
+    padding-top: 84px;
     font-size: 1.5rem;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
-    box-sizing: border-box;
     margin: 0;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: no-repeat url("./images/ccc-background-image.webp");
-    background-position-x: center;
-    background-position-y: top;
-    background-size: cover;
   }
+
 
   main {
-    background-color: rgba(255, 255, 255, 0.7);
+    flex: 1;
   }
 
-  main p {
-    line-height: 1.5rem;
+  footer {
+    min-height: 270px;
+    width: 100%;
   }
 </style>
