@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Nav.module.css";
 import BurgerIcon from "./svg/BurgerIcon";
 import CloseIcon from "./svg/CloseIcon";
-import Button from "./Button";
+import JoinButton from "./JoinButton";
 import logo from "../images/ccc-logo.webp";
 
 export default function Nav() {
@@ -35,7 +35,7 @@ export default function Nav() {
         <a href="/events">Events</a>
         <a href="/gallery">Gallery</a>
         <a href="/contact">Contact Us</a>
-        <Button id="become-member">Become a Member</Button>
+        <JoinButton id={styles["become-member"]}>Become a Member</JoinButton>
       </div>
     </nav>
   );

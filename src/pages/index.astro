@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import Button from "../components/Button";
 import Layout from "../layouts/Layout.astro";
 import Holds from "../images/ccc-climbing-holds.png";
 import MILogo from "../images/mi-logo.png";
@@ -9,6 +8,8 @@ import bmcLogo from "../images/bmc-logo.jpeg";
 import imcLogo from "../images/imc-logo.png";
 import awLogo from "../images/aw-logo.png";
 import mmcLogo from "../images/mmc-logo.png";
+import JoinButton from "../components/JoinButton";
+import Button from "../components/Button";
 
 ---
 
@@ -16,7 +17,7 @@ import mmcLogo from "../images/mmc-logo.png";
   <main>
     <div class="top-wrapper">
       <h1>Celebrating 20 years of <br /><strong>Cork Climbing</strong></h1>
-      <Button>Join us</Button>
+      <JoinButton>Join us</JoinButton>
     </div>
     <div class="events">
       <h2>Upcoming events</h2>
@@ -29,7 +30,7 @@ import mmcLogo from "../images/mmc-logo.png";
         <h2>Got questions about climbing?</h2>
         <p>Our community is not just made up of climbers, it’s made up of professionals from all walks of life who choose climbing as their hobby. And, like many climbers, we spend a lot of time outdoors and care deeply about the natural world around us. 
           So if you have questions about climbing, geology, conservation, fitness, or anything else you think we could assist with, feel free to reach out. We may just have the answers for you!</p>
-          <Button secondary>Contact us</Button>
+          <Button tagName="a" href="./contact" secondary>Contact us</Button>
       </div>
     </div>
     <div class="community">

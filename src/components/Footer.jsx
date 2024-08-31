@@ -3,7 +3,7 @@ import FacebookIcon from "./svg/FacebookIcon";
 import InstagramIcon from "./svg/InstagramIcon";
 import TwitterIcon from "./svg/TwitterIcon";
 import logo from "../images/ccc-logo.webp";
-import Button from "./Button";
+import JoinButton from "./JoinButton";
 
 export default function Footer() {
   return (
@@ -29,7 +29,7 @@ export default function Footer() {
       </div>
       <div className={styles.join}>
         <div>Interested in becoming a member?</div>
-        <Button>Join us</Button>
+        <JoinButton>Join us</JoinButton>
       </div>
     </footer>
   );

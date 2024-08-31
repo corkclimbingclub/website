@@ -1,9 +1,22 @@
 import styles from "./Button.module.css";
 
-export default function Button({ children, secondary = false }) {
+export default function Button({
+  children,
+  tagName = "button",
+  secondary = false,
+  className = "",
+  ...props
+}) {
+  const ButtonTag = tagName;
+
   return (
-    <button className={secondary ? styles.secondary : ""} style={styles.button}>
+    <ButtonTag
+      className={`${styles.button} ${
+        secondary ? styles.secondary : ""
+      } ${className}`}
+      {...props}
+    >
       {children}
-    </button>
+    </ButtonTag>
   );
 }

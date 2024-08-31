@@ -51,7 +51,7 @@ nav {
     font-size: 1.5rem;
   }
 
-  & > a {
+  & > a:not(#become-member) {
     background-color: white;
     color: rgba(67, 67, 67, 1);
     border-bottom: 1px solid rgba(77, 77, 77, 1);
@@ -86,7 +86,7 @@ nav {
       text-transform: none;
     }
 
-    & > a {
+    & > a:not(#become-member) {
       background-color: transparent;
       color: white;
       border-bottom: none;
@@ -97,6 +97,11 @@ nav {
         background-color: transparent;
         text-decoration: underline;
       }
+    }
+
+    & > a#become-member {
+      position: absolute;
+      right: 1rem;
     }
   }
 
