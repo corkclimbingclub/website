@@ -11,3 +11,13 @@ button {
 button:hover {
   background: rgba(205, 35, 49, 0.9);
 }
+
+.secondary {
+  border: 1px solid #4caf4f;
+  background-color: white;
+  color: #cd2331;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
