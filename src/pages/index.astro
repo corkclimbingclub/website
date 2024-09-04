@@ -10,6 +10,9 @@ import awLogo from "../images/aw-logo.png";
 import mmcLogo from "../images/mmc-logo.png";
 import JoinButton from "../components/JoinButton";
 import Button from "../components/Button";
+import { getCollection } from 'astro:content';
+
+const events = await getCollection("events");
 
 ---
 
@@ -23,6 +26,11 @@ import Button from "../components/Button";
       <h2>Upcoming events</h2>
       <p>Our club does regular trips outdoors across Ireland and beyond. Here are just a few of our upcoming calendar highlights.</p>
       <p>This section is still a work in progress, check back soon</p>
+      <ul>
+        {events.map((event) => (
+          <li>{event.data.title}</li>
+        ))}
+      </ul>
     </div>
     <div class="questions">
       <Image width={250} height={250} src={Holds} alt="Three Climbing holds. First is blue, second is white, last is orange" />
