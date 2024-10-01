@@ -2,6 +2,20 @@
 
 This project has been setup with [Astro](https://astro.build/)
 
+## Deploying preview
+
+Deploying a preview is very similar to deploying to prod.
+
+1. Run `npm install`
+2. Build the website using `npm run build-preview`
+3. Push the new dist directory to the server (replace `$VERSION` by your version, for example `v0.1`) : `scp -sr dist corkclt@ftp.cluster023.hosting.ovh.net:/home/corkclt/preview-$VERSION`
+
+NB : You will be prompted for a password. This corresponds to the "corkclt" SFTP user password in OVH (if you don't have the password, you will have to change it [here](https://www.ovh.com/manager/#/web/hosting/corkclt.cluster023.hosting.ovh.net/ftp))
+
+4. Go on the [OVH project page](https://www.ovh.com/manager/#/web/hosting/corkclt.cluster023.hosting.ovh.net/multisite) and change the root folder of the "preview.corkclimbingclub.ie" to your new preview folder
+
+## Deploying to prod
+
 To deploy you need to :
 
 1. Run `npm install`

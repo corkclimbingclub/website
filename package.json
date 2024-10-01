@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
+    "build-preview": "astro check && astro build && cp ./robots.preview.txt ./dist/robots.txt",
     "preview": "astro preview",
     "astro": "astro"
   },
