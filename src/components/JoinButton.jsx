@@ -4,7 +4,7 @@ export default function JoinButton(props) {
   return (
     <Button
       tagName="a"
-      href="./become-member"
+      href="/become-member"
       {...props}
     />
   );
