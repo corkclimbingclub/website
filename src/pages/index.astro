@@ -10,38 +10,64 @@ import awLogo from "../images/aw-logo.png";
 import mmcLogo from "../images/mmc-logo.png";
 import JoinButton from "../components/JoinButton";
 import Button from "../components/Button";
-
 ---
 
 <Layout title="Cork Climbing club">
   <main>
     <div class="top-wrapper">
-      <h1>Celebrating 20 years of <br /><strong>Cork Climbing</strong></h1>
+      <h1>Celebrating 10 years of <br /><strong>Cork Climbing</strong></h1>
       <JoinButton>Join us</JoinButton>
     </div>
     <div class="events">
       <h2>Upcoming events</h2>
-      <p>Our club does regular trips outdoors across Ireland and beyond. Here are just a few of our upcoming calendar highlights.</p>
+      <p>
+        Our club does regular trips outdoors across Ireland and beyond. Here are
+        just a few of our upcoming calendar highlights.
+      </p>
       <p>This section is still a work in progress, check back soon</p>
     </div>
     <div class="questions">
-      <Image width={250} height={250} src={Holds} alt="Three Climbing holds. First is blue, second is white, last is orange" />
+      <Image
+        width={250}
+        height={250}
+        src={Holds}
+        alt="Three Climbing holds. First is blue, second is white, last is orange"
+      />
       <div>
         <h2>Got questions about climbing?</h2>
-        <p>Our community is not just made up of climbers, it’s made up of professionals from all walks of life who choose climbing as their hobby. And, like many climbers, we spend a lot of time outdoors and care deeply about the natural world around us. 
-          So if you have questions about climbing, geology, conservation, fitness, or anything else you think we could assist with, feel free to reach out. We may just have the answers for you!</p>
-          <Button tagName="a" href="./contact" secondary>Contact us</Button>
+        <p>
+          Our community is not just made up of climbers, it’s made up of
+          professionals from all walks of life who choose climbing as their
+          hobby. And, like many climbers, we spend a lot of time outdoors and
+          care deeply about the natural world around us. So if you have
+          questions about climbing, geology, conservation, fitness, or anything
+          else you think we could assist with, feel free to reach out. We may
+          just have the answers for you!
+        </p>
+        <Button tagName="a" href="./contact" secondary>Contact us</Button>
       </div>
     </div>
     <div class="community">
       <h2>Our community</h2>
-      <p>We’re proud to climb alongside our fellow clubs, as well as other associations and businesses that support climbing in the People’s Republic of Cork, across Ireland, and further afield.</p>
+      <p>
+        We’re proud to climb alongside our fellow clubs, as well as other
+        associations and businesses that support climbing in the People’s
+        Republic of Cork, across Ireland, and further afield.
+      </p>
       <div class="community-logos">
         <Image height={130} src={MILogo} alt="Mountaineering Ireland Logo" />
-        <Image height={130} src={bmcLogo} alt="British Mountaineering Council Logo" />
+        <Image
+          height={130}
+          src={bmcLogo}
+          alt="British Mountaineering Council Logo"
+        />
         <Image height={130} src={bccLogo} alt="Belfast Climbing Club Logo" />
         <Image height={130} src={mmcLogo} alt="Munster Mountain Club Logo" />
-        <Image height={130} src={imcLogo} alt="Irish Mountaineering Club Logo" />
+        <Image
+          height={130}
+          src={imcLogo}
+          alt="Irish Mountaineering Club Logo"
+        />
         <Image height={130} src={awLogo} alt="Awesome Walls Logo" />
       </div>
     </div>
@@ -54,7 +80,7 @@ import Button from "../components/Button";
     width: 100%;
     background-repeat: no-repeat;
     background-position: center 50%;
-    background-image: url('./images/top-mobile.webp');
+    background-image: url("./images/top-mobile.webp");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +99,8 @@ import Button from "../components/Button";
     font-size: 1rem;
   }
 
-  .questions p, .questions h2 {
+  .questions p,
+  .questions h2 {
     text-align: left;
   }
 
@@ -89,11 +116,13 @@ import Button from "../components/Button";
     }
   }
 
-  .events, .community {
+  .events,
+  .community {
     padding: 4rem;
   }
 
-  .events p, .community p {
+  .events p,
+  .community p {
     color: rgba(113, 113, 113, 1);
     font-size: 1rem;
   }
@@ -113,7 +142,7 @@ import Button from "../components/Button";
 
   @media (min-width: 800px) {
     .top-wrapper {
-      background-image: url('./images/top-desktop.webp');
+      background-image: url("./images/top-desktop.webp");
     }
   }
 </style>
