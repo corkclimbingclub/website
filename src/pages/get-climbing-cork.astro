@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import GetClimbingImage from "../images/get-climbing-paper-news-article.webp";
+---
+
+<Layout title="Get climbing | Cork Climbing club">
+  <main>
+    <div class="get-climbing-cork">
+      <h1>Get climbing</h1>
+      <div>
+        <Image
+          width={300}
+          alt="Get Climbing initiative article in a paper news"
+          src={GetClimbingImage}
+        />
+      </div>
+      <p>
+        Get Climbing is a social inclusion youth initiative funded and created
+        by Mountaineering Ireland (MI) in Dublin in 2017. It is aimed at
+        engaging young people in disadvantaged areas or circumstances into the
+        sport of indoor and outdoor climbing. The Cork Climbing Club initiated
+        and piloted the Get Climbing Cork initiative in October 2021 in Awesome
+        Walls Cork and coordinates it locally through a voluntary committee,
+        with the support of Mountaineering Ireland. Through the initiative,
+        young participants are introduced to rock climbing skills indoors and
+        outdoors with trained and qualified instructors. For those young people
+        who develop a love for the sport, our aim is to support them to expand
+        their understanding of the sport and support their access to
+        climbing/career opportunities available to them in Ireland. On occasion,
+        young people may be accompanied on outings and supported by fully vetted
+        adult climbers volunteers from the Cork Climbing Club. Those volunteers
+        have trained in child safeguarding and are volunteering under the
+        supervision of the instructors. If you would like more information on
+        the Get Climbing Cork initiative, please contact the Cork Climbing Club
+        on corkclimbingclub@gmail.com.
+      </p>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding-top: 150px;
+  }
+
+  p {
+    color: rgba(113, 113, 113, 1);
+    font-size: 1rem;
+    padding: 2rem;
+  }
+
+  @media (min-width: 800px) {
+    .get-climbing-cork {
+      text-align: left;
+      display: grid;
+      grid-template-columns: 1fr 500px 500px 1fr;
+      grid-template-rows: auto auto 2rem;
+    }
+
+    .get-climbing-cork h1 {
+      grid-row: 1 / 2;
+      grid-column: 2 / 4;
+    }
+
+    .get-climbing-cork div {
+      grid-row: 2 / 2;
+      grid-column: 2 / 3;
+    }
+
+    .get-climbing-cork p {
+      padding: 0;
+      grid-row: 2 / 2;
+      grid-column: 3 / 4;
+    }
+  }
+</style>
