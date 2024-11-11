@@ -18,7 +18,7 @@ import Button from "../components/Button";
       <h1>Celebrating 10 years of <br /><strong>Cork Climbing</strong></h1>
       <JoinButton>Join us</JoinButton>
     </div>
-    <div style="padding: 2rem; font-weight: bold;">
+    <div style="padding: 2rem;">
       If you're interested in Outdoor Climbing we are the club for you
     </div>
     <!-- <div class="events">
@@ -36,7 +36,7 @@ import Button from "../components/Button";
         src={Holds}
         alt="Three Climbing holds. First is blue, second is white, last is orange"
       />
-      <div>
+      <div class="questions-content">
         <h2>About the Club</h2>
         <p>
           Established in 2015 Cork Climbing Club brings together all who are interested in the rock climbing scene in Ireland. Including bouldering, traditional and sports climbing. We promote the sport locally, develop international relations and organise climbing activities. You can find us at Awesome Walls Cork in Bishopstown, where we meet regularly Monday and Wednesday evenings.
@@ -68,13 +68,24 @@ import Button from "../components/Button";
     padding: 4rem;
   }
 
+  .questions-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
   .questions p {
     font-size: 1rem;
+  }
+
+  .questions-content a {
+    align-self: center;
   }
 
   .questions p,
   .questions h2 {
     text-align: left;
+    margin: 0;
   }
 
   @media (min-width: 800px) {
@@ -82,6 +93,10 @@ import Button from "../components/Button";
       display: flex;
       justify-content: center;
       gap: 2rem;
+    }
+
+    .questions-content a {
+      align-self: flex-start;
     }
 
     .questions > div {
@@ -107,6 +122,11 @@ import Button from "../components/Button";
   h1 {
     margin: 0;
     color: white;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-weight: 600;
   }
 
   h1 strong {

@@ -61,6 +61,10 @@ nav {
       background-color: rgba(224, 224, 224, 1);
     }
   }
+
+  & > a#become-member {
+    font-weight: 500;
+  }
 }
 
 .nav-links-wrapper:global(.open) {
@@ -102,6 +106,8 @@ nav {
     & > a#become-member {
       position: absolute;
       right: 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
     }
   }
 
