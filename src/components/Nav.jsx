@@ -34,6 +34,7 @@ export default function Nav() {
         <a href="/">Home</a>
         <a href="/get-climbing-cork">Get Climbing Cork</a>
         <a href="/gallery">Gallery</a>
+        <a href="/code-of-conduct">Code of Conduct</a>
         <a href="/contact">Contact Us</a>
         <JoinButton id={styles["become-member"]}>Become a Member</JoinButton>
       </div>
