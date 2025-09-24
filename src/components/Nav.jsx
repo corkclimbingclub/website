@@ -32,6 +32,7 @@ export default function Nav() {
       </div>
       <div className={`${styles["nav-links-wrapper"]} ${isOpen ? "open" : ""}`}>
         <a href="/">Home</a>
+        <a href="/events">Events</a>
         <a href="/get-climbing-cork">Get Climbing Cork</a>
         <a href="/gallery">Gallery</a>
         <a href="/code-of-conduct">Code of Conduct</a>
