@@ -185,11 +185,13 @@ import Layout from "../layouts/Layout.astro";
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     position: relative;
     overflow: hidden;
+    z-index: 1;
   }
 
   .event-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    z-index: 2;
   }
 
   .event-card.featured {
