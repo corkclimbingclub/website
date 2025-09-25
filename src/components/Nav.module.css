@@ -5,6 +5,7 @@ nav {
   right: 0;
   position: fixed;
   background-color: rgba(39, 39, 40, 0.9);
+  z-index: 1000;
 }
 
 #nav-icon-wrapper {
