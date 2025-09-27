@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ibl-round-1-2025",
+    "title": "IBL Round 1 2025/2026",
+    "date": "2024-10-26",
+    "time": "10:00 AM",
+    "location": "Gravity Climbing Centre",
+    "description": "Irish Bouldering League Round 1 for the 2025/2026 season.",
+    "badge": "Competition",
+    "type": "competition"
+  },
+  {
+    "id": "el-chorro-trip-2024",
+    "title": "El Chorro Trip",
+    "date": "2024-11-15",
+    "endDate": "2024-11-23",
+    "location": "El Chorro, Spain",
+    "description": "A week-long climbing trip to the stunning cliffs of El Chorro.",
+    "badge": "Trip",
+    "type": "trip"
+  },
+  {
+    "id": "ibl-round-2-2025",
+    "title": "IBL Round 2 2025/2026",
+    "date": "2024-11-23",
+    "time": "10:00 AM",
+    "location": "Awesome Walls Cork",
+    "description": "Irish Bouldering League Round 2 for the 2025/2026 season.",
+    "badge": "Competition",
+    "type": "competition"
+  },
+  {
+    "id": "christmas-party-2024",
+    "title": "Christmas Party",
+    "date": "2024-11-29",
+    "time": "7:00 PM",
+    "location": "Franciscan Well Brewery",
+    "description": "Festive celebrations with food, drinks, and climbing stories!",
+    "badge": "Social",
+    "type": "social"
+  },
+  {
+    "id": "ibl-round-3-2025",
+    "title": "IBL Round 3 2025/2026",
+    "date": "2024-12-14",
+    "time": "10:00 AM",
+    "location": "Dublin Climbing Centre",
+    "description": "Irish Bouldering League Round 3 for the 2025/2026 season.",
+    "badge": "Competition",
+    "type": "competition"
+  },
+  {
+    "id": "ibl-round-4-2025",
+    "title": "IBL Round 4 2025/2026",
+    "date": "2025-01-25",
+    "time": "10:00 AM",
+    "location": "Suas Climbing Centre",
+    "description": "Irish Bouldering League Round 4 for the 2025/2026 season.",
+    "badge": "Competition",
+    "type": "competition"
+  },
+  {
+    "id": "agm-2025",
+    "title": "AGM",
+    "date": "2025-02-11",
+    "time": "7:30 PM",
+    "location": "Awesome Walls Cork",
+    "description": "Annual General Meeting to discuss club matters and future plans.",
+    "badge": "Meeting",
+    "type": "special"
+  },
+  {
+    "id": "ibl-round-5-2025",
+    "title": "IBL Round 5 2025/2026",
+    "date": "2025-02-22",
+    "time": "10:00 AM",
+    "location": "Awesome Walls Dublin",
+    "description": "Irish Bouldering League Round 5 for the 2025/2026 season.",
+    "badge": "Competition",
+    "type": "competition"
+  }
+]
