@@ -72,7 +72,7 @@ nav {
   max-height: 500px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1080px) {
   nav {
     padding: 0px;
     height: 84px;
