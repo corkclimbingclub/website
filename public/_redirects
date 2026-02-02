@@ -1,0 +1,3 @@
+# Netlify redirects
+# Format: from_path to_path status_code
+/code-of-conduct /policies 301
