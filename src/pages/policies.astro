@@ -54,22 +54,22 @@ import Layout from "../layouts/Layout.astro";
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    padding-top: 180px;
+    padding-top: var(--page-top);
     text-align: left;
   }
 
   h1 {
     text-align: center;
     margin-bottom: 3rem;
-    color: #2c3e50;
-    font-size: 2.5rem;
+    color: var(--color-dark);
+    font-size: var(--font-h1);
   }
 
   h2 {
-    color: #34495e;
+    color: var(--color-dark);
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    font-size: var(--font-h2);
   }
 
   section {
@@ -79,7 +79,7 @@ import Layout from "../layouts/Layout.astro";
   p {
     line-height: 1.6;
     margin-bottom: 1.2rem;
-    color: #555;
+    color: var(--color-text);
   }
 
   .policies-list ul {
@@ -94,9 +94,9 @@ import Layout from "../layouts/Layout.astro";
     justify-content: space-between;
     padding: 1rem;
     margin-bottom: 0.75rem;
-    background-color: #f8f9fa;
+    background-color: var(--color-bg-light);
     border-radius: 8px;
-    border-left: 4px solid #3498db;
+    border-left: 4px solid var(--color-brand);
     transition: background-color 0.2s ease;
   }
 
@@ -115,7 +115,7 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .policy-name {
-    color: #7f8c8d;
+    color: var(--color-text-muted);
     font-weight: 500;
     flex: 1;
   }
@@ -131,19 +131,19 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .policies-list a {
-    color: #2c3e50;
+    color: var(--color-dark);
     text-decoration: none;
     font-weight: 500;
     flex: 1;
   }
 
   .policies-list a:hover {
-    color: #3498db;
+    color: var(--color-brand);
     text-decoration: underline;
   }
 
   .file-type {
-    background-color: #e74c3c;
+    background-color: var(--color-brand);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 4px;
@@ -155,16 +155,16 @@ import Layout from "../layouts/Layout.astro";
   @media (max-width: 768px) {
     .content {
       padding: 1rem;
-      padding-top: 180px;
+      padding-top: var(--page-top);
     }
-    
+
     h1 {
-      font-size: 2rem;
+      font-size: calc(var(--font-h1) * 0.8);
       margin-bottom: 2rem;
     }
-    
+
     h2 {
-      font-size: 1.5rem;
+      font-size: calc(var(--font-h2) * 0.85);
     }
 
     .policies-list li {
