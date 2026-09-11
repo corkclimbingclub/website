@@ -1,52 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import eventsData from "../data/events.json";
-
-// Helper function to format date
-function formatDate(dateString: string, endDate: string | null = null) {
-  const date = new Date(dateString);
-  const month = date.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
-  const day = date.getDate();
-  
-  if (endDate) {
-    const endDateObj = new Date(endDate);
-    const endDay = endDateObj.getDate();
-    return { month, day: `${day}-${endDay}` };
-  }
-  
-  return { month, day: day.toString() };
-}
-
-// Sort events by date
-const sortedEvents = eventsData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 ---
 
 <Layout title="Events - Cork Climbing Club">
   <main>
     <div class="events-header">
       <h1>Upcoming Events for Club Members</h1>
-    </div>
-
-    <div class="calendar-container">
-      <div class="calendar-grid">
-        {sortedEvents.map((event) => {
-          const formattedDate = formatDate(event.date, event.endDate);
-          return (
-            <div class={`event-card ${event.type === 'special' ? 'special' : ''} ${event.type === 'trip' ? 'featured' : ''}`}>
-              <div class="event-date">
-                <span class="month">{formattedDate.month}</span>
-                <span class="day">{formattedDate.day}</span>
-              </div>
-              <div class="event-details">
-                <h3>{event.title}</h3>
-                {event.time && <p class="event-time">{event.time}</p>}
-                <p class="event-location">{event.location}</p>
-                <p class="event-description">{event.description}</p>
-                <span class="event-badge">{event.badge}</span>
-              </div>
-            </div>
-          );
-        })}
+      <div class="calendar-embed">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=corkclimbingclub%40gmail.com&ctz=Europe%2FDublin"
+          style="border: 0"
+          width="100%"
+          height="600"
+          loading="lazy"
+          title="Cork Climbing Club calendar"
+        ></iframe>
       </div>
     </div>
 
@@ -89,108 +57,15 @@ const sortedEvents = eventsData.sort((a, b) => new Date(a.date).getTime() - new 
     color: #333;
   }
 
-  .calendar-container {
-    margin-bottom: 4rem;
-  }
-
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-  }
-
-  .event-card {
-    background: white;
+  .calendar-embed {
+    margin-bottom: 3rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    display: flex;
-    gap: 1.5rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
     overflow: hidden;
-    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .event-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    z-index: 2;
-  }
-
-  .event-card.featured {
-    border-left: 4px solid #e74c3c;
-  }
-
-  .event-card.special {
-    border-left: 4px solid #3498db;
-  }
-
-  .event-date {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 8px;
-    padding: 1rem;
-    min-width: 80px;
-    text-align: center;
-  }
-
-  .event-date .month {
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
-
-  .event-date .day {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1;
-  }
-
-  .event-details {
-    flex: 1;
-    text-align: left;
-  }
-
-  .event-details h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.3rem;
-    color: #333;
-  }
-
-  .event-time {
-    color: #e74c3c;
-    font-weight: 600;
-    margin: 0.25rem 0;
-    font-size: 1rem;
-  }
-
-  .event-location {
-    color: #666;
-    margin: 0.25rem 0;
-    font-size: 0.9rem;
-  }
-
-  .event-description {
-    color: #555;
-    margin: 0.75rem 0 0 0;
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
-
-  .event-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
+  .calendar-embed iframe {
+    display: block;
   }
 
   .events-info {
@@ -230,26 +105,6 @@ const sortedEvents = eventsData.sort((a, b) => new Date(a.date).getTime() - new 
   }
 
   @media (max-width: 768px) {
-    .calendar-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .event-card {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .event-date {
-      align-self: center;
-      flex-direction: row;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-    }
-    
-    .event-date .day {
-      font-size: 1.5rem;
-    }
-    
     .events-header h1 {
       font-size: 2rem;
     }
